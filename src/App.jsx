@@ -7,6 +7,8 @@ import Expenses from "./pages/Expenses";
 import AddExpense from "./pages/AddExpense";
 import ExpenseDetails from "./pages/ExpenseDetails";
 import EditExpense from "./pages/EditExpense";
+import MonthlyExpenses from "./pages/MonthlyExpenses";
+import MonthlyExpenseDetails from "./pages/MonthlyExpenseDetails";
 
 
 function App() {
@@ -48,6 +50,16 @@ function App() {
           <Route
             path="/expenses/:id/edit"
             element={<EditExpense />}
+          />
+
+          <Route
+            path="/monthly-expenses"
+            element={<MonthlyExpenses />}
+          />
+
+          <Route
+            path="/monthly-expenses/:year/:month"
+            element={<MonthlyExpenseDetails />}
           />
 
         </Route>

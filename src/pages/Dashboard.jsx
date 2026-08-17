@@ -107,9 +107,10 @@ function Dashboard() {
         </div>
 
 
-        {/* This Month */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
-
+        <Link
+          to="/monthly-expenses"
+          className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm hover:shadow-md hover:border-green-300 transition block"
+        >
           <p className="text-sm text-gray-500">
             This Month
           </p>
@@ -118,7 +119,10 @@ function Dashboard() {
             ₹{monthlyExpense.toLocaleString()}
           </h2>
 
-        </div>
+          <p className="text-sm text-green-600 mt-2">
+            View monthly expenses →
+          </p>
+        </Link>
 
 
         {/* Total Records */}
@@ -154,9 +158,9 @@ function Dashboard() {
       {/* Recent Expenses */}
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
 
-        <div className="flex items-center justify-between p-5 border-b border-gray-200">
+        <div className="flex items-center justify-between p-5 border-b border-gray-500 bg-green-100">
 
-          <div>
+          <div >
 
             <h2 className="text-lg font-semibold text-gray-800">
               Recent Expenses
